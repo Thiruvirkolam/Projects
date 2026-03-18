@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Patients</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                Healthcare System
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Dashboard</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="patients.html">Patients</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="doctors.html">Doctors</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="appointments.html">Appointments</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+
+        <h3>Patients</h3>
+
+        <input type="text"
+            id="searchPatient"
+            class="form-control mb-3"
+            placeholder="Search for patients by name and phone...">
+
+        <button class="btn btn-success mb-3"
+                data-bs-toggle="modal"
+                data-bs-target="#patientModal">
+            Add Patient
+        </button>
+
+        <table class="table table-bordered">
+            <thead class="table-success">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Medical Notes</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody id="patientTable"></tbody>
+        </table>
+
+    </div>
+
+    <div class="modal fade"
+        id="patientModal">
+
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Add Patient</h5>
+                </div>
+                <div class="modal-body">
+
+                    <input type="text"
+                        id="name"
+                        class="form-control mb-2"
+                        placeholder="Name">
+
+                    <input type="number"
+                        id="age"
+                        class="form-control mb-2"
+                        placeholder="Age">
+
+                    <select id="gender"
+                            class="form-control mb-2">
+                        <option value="">Select Gender</option>
+                        <option>Male</option>
+                        <option>Female</option>
+
+                    </select>
+
+                    <input type="text"
+                        id="phone"
+                        class="form-control mb-2"
+                        placeholder="Phone">
+
+                    <input type="email"
+                        id="email"
+                        class="form-control mb-2"
+                        placeholder="Email">
+
+                    <textarea id="notes"
+                            class="form-control"
+                            placeholder="Medical Notes"></textarea>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-primary"
+                            id="savePatient">
+                        Save
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/data.js"></script>
+        <script src="js/patients.js"></script>
+</body>
+</html>
