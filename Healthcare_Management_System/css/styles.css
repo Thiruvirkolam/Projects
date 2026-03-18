@@ -1,0 +1,43 @@
+body
+{
+    background-color: #f4f6f9;
+}
+
+.navbar a
+{
+    margin-left: 15px;
+}
+
+.card
+{
+    text-align: center;
+}
+
+.table
+{
+    background: white;
+}
+
+.badge-booked
+{
+    background-color: blue;
+}
+
+.badge-completed
+{
+    background-color: green;
+}
+
+.badge-cancelled
+{
+    background-color: red;
+}
+
+.card {
+    border-radius: 12px;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
