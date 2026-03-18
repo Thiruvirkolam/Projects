@@ -1,1 +1,76 @@
+Healthcare System Web Application :
 
+Overview :
+The Healthcare System is a lightweight web application designed to manage patients, doctors, and appointments. 
+It provides a simple and user-friendly interface for healthcare administrators to perform CRUD operations 
+(Create, Read, Update, Delete) efficiently. The project is built using HTML, CSS, Bootstrap, JavaScript, and 
+Local Storage, making it fully client-side and easy to run without any backend server.
+
+1. Doctor Management :
+=> Add new doctors with their name, specialization, and available time slots.
+=> Edit existing doctor details.
+=> Delete doctor records.
+=> Ensure appointments are scheduled only within the doctor’s available time slots.
+
+2. Patient Management :
+=> Add new patients with name, age, gender, phone, email, and medical notes.
+=> Edit or delete existing patient records.
+=> Search patients by name or phone number.
+
+3. Appointment Management :
+=> Book appointments for a patient with a selected doctor.
+=> Select date and available time slots dynamically based on doctor availability.
+=> Prevent double booking for the same doctor at the same time.
+=> Update appointment status: Booked, Completed, Cancelled.
+=> Filter appointments by date or status.
+
+4. User Interface :
+=> Responsive navigation bar with links to Dashboard, Patients, Doctors, and Appointments.
+=> Clean table-based view for patients, doctors, and appointments.
+=> Modal pop-ups for adding or editing records.
+=> Status badges for quick identification of appointment states.
+=> Time slot management strictly follows doctor availability.
+
+5. Technologies Used :
+-> HTML5 – Page structure.
+-> CSS3 & Bootstrap 5 – Responsive design and styling.
+-> JavaScript & jQuery – DOM manipulation and event handling.
+-> Local Storage – Client-side data storage without a backend server.
+-> Bootstrap Modals – For forms and pop-ups.
+
+6. Folder Structure :
+healthcare-frontend/
+│
+├─ index.html                # Dashboard page
+├─ doctors.html              # Doctors management page
+├─ patients.html             # Patients management page
+├─ appointments.html         # Appointments management page
+│
+├─ css/
+│   └─ styles.css            # Custom styles and colours
+│
+├─ js/
+│   ├─ data.js               # Common data and Local Storage functions
+│   ├─ doctors.js            # Doctor CRUD logic
+│   ├─ patients.js           # Patient CRUD logic
+│   ├─ appointments.js       # Appointment CRUD logic
+│   └─ common.js             # Utility functions (getDoctorName, getPatientName)
+│
+└─ readme.txt                # Project documentation
+
+7. Usage :
+<> Open the project in a browser by opening index.html.
+<> Navigate to Doctors to add doctors and define their availability.
+<> Navigate to Patients to add patient records.
+<> Navigate to Appointments to book appointments:
+   * Select a patient, doctor, date, and time slot.
+   * Only available time slots of the selected doctor will be displayed.
+   * Status can be updated after completion or cancellation.
+<> All data is stored locally in the browser using Local Storage.
+
+8. Key Functionalities : 
+# Dynamic dropdowns for doctors and patients.
+# Validation checks for empty fields and invalid data.
+# Time slot conflict detection.
+# Editable records with pre-filled modal forms.
+# Filter and search features for efficient management.
